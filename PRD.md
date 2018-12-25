@@ -39,7 +39,7 @@
 
 形色植物识别API包括中国常见4000种植物，准确率>98%。
 
-
+百度语音合成API，准确率>97%。
 # 2. 用户分析
 ## a) 目标用户群体
 - 年龄：13-30岁 
@@ -60,9 +60,11 @@
 |4|语音播报|不想看太多的文字|语音合成
 
 ## c) 使用的API
-- 花伴侣智能植物识别API
-- 形色植物识别API
-- 百度语音合成API
+
+- [花伴侣智能植物识别API](https://market.aliyun.com/products/57124001/cmapi018620.html?spm=5176.10695662.1996646101.searchclickresult.698566bbXs1Z67#sku=yuncode1262000007)
+- [形色植物识别API](https://market.aliyun.com/products/57124001/cmapi029377.html?spm=5176.10695662.1996646101.searchclickresult.1aef61a2LJohk8#sku=yuncode2337700006)
+- [百度语音合成API](http://ai.baidu.com/tech/speech/tts)
+
 
 # 3.可行性分析
 https://github.com/ccwwen/try/tree/master
