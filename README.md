@@ -67,12 +67,13 @@
 - [百度细粒度图像识别API](https://cloud.baidu.com/product/imagerecognition/fine_grained)
 
 # 3.可行性分析
+https://github.com/ccwwen/try/tree/master
 
 **调用花伴侣智能植物识别API**
 
 1.识别清晰的植物图片
 ![杜鹃.jpeg](https://upload-images.jianshu.io/upload_images/9130153-c795a559701a8cb8.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-调用API
+
 
 
 ```python
@@ -158,6 +159,7 @@ if content:
 ```
 
 2.识别杂草
+#### 狗尾草
 ![狗尾草.jpg](https://upload-images.jianshu.io/upload_images/9130153-0662418171084be3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```python
@@ -186,11 +188,26 @@ weed()
 "Name":"菵草"}]}
 ```
 
+**百度API**
 
-
+```json
+{"log_id": "6791850728801845563",
+	"result": [
+	    {"score": 0.96171873807907,
+			"name": "狗尾草"},
+		{"score": 0.11733993142843,
+			"name": "小草"},
+		{"score": 0.020295264199376,
+			"name": "金色狗尾草"},
+		{"score": 0.0097219282761216,
+			"name": "梯牧草"},
+		{"score": 0.0089892046526074,
+			"name": "猫尾草"}]}
+```
+百度细粒度图像识别的结果较正确，图片是狗尾草而不是金色狗尾草，因为光线原因，狗尾草的根须被阳光照射，看起来像金色的，导致花伴侣识别出现差错。
 
 3.识别模糊的植物图片
-
+#### 曼莎珠华、曼陀罗
 
 ![image](https://upload-images.jianshu.io/upload_images/9130153-685ad592134f1e13.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 **花伴侣API**
@@ -229,11 +246,11 @@ weed()
 ![语音合成.jpg](https://upload-images.jianshu.io/upload_images/9130153-401f0f852291377b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 4.API使用风险评估
-图片灰暗
+#### 图片灰暗的蒲公英花
 ![暗蒲公英花.jpg](https://upload-images.jianshu.io/upload_images/9130153-74d5a74558e2005f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 输出结果
 
-
+**花伴侣API**
 ```python
 import base64
 import requests
@@ -268,8 +285,23 @@ recognize2()
 {"Score":"1.50","AliasList":[],"Genus":"淫羊藿属","InfoCode":"k3v1uRBPjzoGmQpR","AliasName":"","Family":"小檗科","ImageUrl":"https://api.aiplants.cn/resource/1001/%E7%B2%97%E6%AF%9B%E6%B7%AB%E7%BE%8A%E8%97%BF/ba6b39491fb2641199574174486066e574a19552ad6398f774c260bd4a3c7d8e.jpeg","LatinName":"Epimedium acuminatum",
 "Name":"粗毛淫羊藿"}]}
 ```
+**百度API**
 
-
+```json
+{"log_id": "4447856955722587387",
+	"result": [
+		{"score": 0.62893480062485,
+			"name": "款冬"},
+		{"score": 0.23325063288212,
+			"name": "蒲公英"},
+		{"score": 0.081424951553345,
+			"name": "毛果一枝黄花"},
+		{"score": 0.049502149224281,
+			"name": "向日葵"},
+		{	"score": 0.047010716050863,
+			"name": "菊花"}]}
+```
+百度细粒度图像识别API识别结果第三个是正确的，而花伴侣API的结果都是错误的。
 
 ---
 植物图片清晰识别的效果最好，甚至使用模糊的、图片上有字体遮盖的图片，曼莎珠花属石蒜科，但并不是石蒜，所以识别结果有偏差。
