@@ -67,7 +67,6 @@
 - [百度细粒度图像识别API](https://cloud.baidu.com/product/imagerecognition/fine_grained)
 
 # 3.可行性分析
-https://github.com/ccwwen/try/tree/master
 
 **调用花伴侣智能植物识别API**
 
