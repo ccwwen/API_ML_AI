@@ -313,8 +313,4 @@ recognize2()
 ![image](https://upload-images.jianshu.io/upload_images/9130153-547beb11a20bb447.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 3.产品原型
 [ARPLANT](https://ccwwen.github.io/ARPLANT/)
-![image](https://upload-images.jianshu.io/upload_images/9130153-1fa5cbb8e34ab8bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![image](https://upload-images.jianshu.io/upload_images/9130153-63f9e88a7f7002a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![image](https://upload-images.jianshu.io/upload_images/9130153-329945e5e88ec3d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
