@@ -79,7 +79,7 @@
 import base64
 import requests
 url_host = "http://plantgw.nongbangzhu.cn"
-app_code = '38ef43ff3c704a7c8bc5f934185b3a3d' #这里替换为你购买的AppCode
+app_code = '-' #这里替换为你购买的AppCode
 # 植物花卉识别接口_v2的请求示例
 def recognize2():
     url_path = '/plant/recognize2'
@@ -88,7 +88,7 @@ def recognize2():
         img_base64 = base64.b64encode(image_file.read()).decode('ascii')
         body = {'img_base64': img_base64}
 
-        headers = {'content-type': "application/x-www-form-urlencoded", 'authorization': "APPCODE " + '38ef43ff3c704a7c8bc5f934185b3a3d'}
+        headers = {'content-type': "application/x-www-form-urlencoded", 'authorization': "APPCODE " + '-'}
         response = requests.request("POST", url_host+url_path, data=body, headers=headers) # 默认utf-8
         print(response.text)
 
@@ -138,7 +138,7 @@ img = base64.b64encode(f.read()).decode('ascii')
 params = {"image":img}
 params = urlencode(params).encode("utf-8")
 
-access_token = '24.2ea720d5c063b8c0691619fde665f0b8.2592000.1548431336.282335-15268233'
+access_token = '-'
 request_url = request_url + "?access_token=" + access_token
 request = Request(url=request_url, data=params)
 request.add_header('Content-Type', 'application/x-www-form-urlencoded')
@@ -254,7 +254,7 @@ weed()
 import base64
 import requests
 url_host = "http://plantgw.nongbangzhu.cn"
-app_code = '38ef43ff3c704a7c8bc5f934185b3a3d' #这里替换为你购买的AppCode
+app_code = '-' #这里替换为你购买的AppCode
 # 植物花卉识别接口_v2的请求示例
 def recognize2():
     url_path = '/plant/recognize2'
@@ -314,3 +314,7 @@ recognize2()
 3.产品原型
 [ARPLANT](https://ccwwen.github.io/ARPLANT/)
 
+# 将要做
+- 语音播报可选择播放声音（男声、女声、儿童）
+- 播放时可选择从何处开始播报。做进度条，拖动进度条可到达播放位置
+- 可调整播放语速
